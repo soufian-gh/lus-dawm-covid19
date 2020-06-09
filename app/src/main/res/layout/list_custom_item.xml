@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:background="@color/color_gray"
+    >
+
+
+
+    <androidx.cardview.widget.CardView
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="13dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageFlag"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <TextView
+        android:textColor="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCountryName"
+        android:layout_gravity="center_vertical"
+        android:text="Country Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingLeft="15dp"/>
+
+
+
+
+</LinearLayout>
