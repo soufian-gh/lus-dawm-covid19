@@ -11,10 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.eazegraph.lib.charts.BarChart;
 import org.eazegraph.lib.models.BarModel;
 
+import java.text.DecimalFormat;
+
 public class DetailActivity extends AppCompatActivity {
 
     private  int positionCountry;
-    TextView tvCountry,tvCases,tvRecovered,tvCritical,tvActive,tvTodayCases,tvTotalDeaths,tvTodayDeaths;
+    TextView tvCountry,tvCases,tvRecovered,tvCritical,tvActive,tvTodayCases,tvTotalDeaths,tvTodayDeaths,tvDeathRate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,8 @@ public class DetailActivity extends AppCompatActivity {
         tvTodayCases = findViewById(R.id.tvTodayCases);
         tvTotalDeaths = findViewById(R.id.tvDeaths);
         tvTodayDeaths = findViewById(R.id.tvTodayDeaths);
+        tvDeathRate = findViewById(R.id.tvDeathRate);
+
 
         tvCountry.setText(AffectedCountries.countryModelsList.get(positionCountry).getCountry());
         tvCases.setText(AffectedCountries.countryModelsList.get(positionCountry).getCases());
@@ -54,6 +58,12 @@ public class DetailActivity extends AppCompatActivity {
         float deaths =Float.parseFloat(AffectedCountries.countryModelsList.get(positionCountry).getDeaths());
 
 
+        //////////////////////////////////////////////////////////////
+        DecimalFormat df = new DecimalFormat("0.00");
+        float deathRate = (deaths * 100) / cases;
+        String a = df.format (deathRate);
+        tvDeathRate.setText (a+" %");
+        //////////////////////////////////////////////////////////////
 
 
         BarChart mBarChart = (BarChart) findViewById(R.id.barchart);
