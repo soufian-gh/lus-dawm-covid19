@@ -286,4 +286,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),AffectedCountries.class));
 
     }
+
+
+
+    public void goMorelayout(View view) {
+
+        startActivity(new Intent(getApplicationContext(),MoreActivity.class));
+
+    }
 }

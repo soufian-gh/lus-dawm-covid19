@@ -622,18 +622,43 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btnTrack"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:background="@color/color_gray"
-        android:text="Track countries"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:padding="5dp"
-        android:onClick="goTrackCountries"/>
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btnTrack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_gray"
+            android:text="Track countries"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:onClick="goTrackCountries"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_gray"
+            android:text="More"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:onClick="goMorelayout"
+            android:layout_weight="3"
+            />
+
+    </LinearLayout>
+
 
 
 
