@@ -294,4 +294,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),MoreActivity.class));
 
     }
+
+    public void goToNews(View view) {
+
+        startActivity(new Intent(getApplicationContext(),NewsActivity.class));
+
+    }
 }
