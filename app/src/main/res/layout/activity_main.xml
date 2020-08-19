@@ -649,7 +649,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@color/color_gray"
-            android:text="More"
+            android:text="About"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:padding="5dp"

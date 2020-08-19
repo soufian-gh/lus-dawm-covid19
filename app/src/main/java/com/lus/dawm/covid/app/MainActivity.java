@@ -120,8 +120,6 @@ public class MainActivity extends AppCompatActivity {
 
         //checking gps state
 
-
-
         tvCases = findViewById(R.id.tvCases);
         tvRecovered = findViewById(R.id.tvRecovered);
         tvCritical = findViewById(R.id.tvCritical);
@@ -295,9 +293,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void goToNews(View view) {
 
-        startActivity(new Intent(getApplicationContext(),NewsActivity.class));
-
-    }
 }
